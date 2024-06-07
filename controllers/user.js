@@ -34,7 +34,8 @@ const handleUserLogin = async (req, res) => {
 
     // setUser(sessionId, validUser)
     const token = setUser(validUser)
-    res.cookie("uid", token)
+    // res.cookie("uid", token)
+    res.json({token})
     console.log('Login successful, sessionId:', token);
 
     res.redirect("/")
